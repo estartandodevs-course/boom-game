@@ -1,7 +1,11 @@
 const buttonInitGame = document.querySelector(".btn-init-game");
+const counter = document.querySelector(".counter");
+
+let points = 0;
 
 buttonInitGame.addEventListener("click", function () {
   buttonInitGame.remove();
+  counter.style.display = "block";
   initGame();
 });
 
@@ -35,4 +39,6 @@ function removeBalloon(element) {
   boomSound.play();
   boomSound.volume = 0.1;
   element.remove();
+
+  counter.textContent = points += 1;
 }

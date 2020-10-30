@@ -67,3 +67,12 @@ header {
   cursor: url("./assets/alfinete.png"), auto;
   position: absolute;
 }
+
+.counter {
+  color: #000;
+  background-color: #81caa8;
+  padding: 20px;
+  font-weight: bold;
+  margin-left: auto;
+  display: none;
+}

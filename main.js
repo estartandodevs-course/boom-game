@@ -6,7 +6,7 @@ buttonInitGame.addEventListener("click", function () {
 });
 
 function initGame() {
-  setInterval(createBalloon, 500);
+  setInterval(createBalloon, 1000);
 }
 
 const balloonsContainer = document.querySelector(".container-balloons");

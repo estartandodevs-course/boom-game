@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/baloon.ico" type="image/x-icon" />
-    <title>BOOM Devs</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <h1 class="game-title">BOOM! Devs</h1>
-      <h2 class="game-description">estoure os balões</h2>
-      <button class="btn-init-game">Jogar</button>
-    </header>
-    <section class="container-balloons"></section>
 
-    <script src="./main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/baloon.ico" type="image/x-icon" />
+  <title>BOOM Devs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1 class="game-title">BOOM! Devs</h1>
+    <h2 class="game-description">estoure os balões</h2>
+    <button class="btn-init-game">Jogar</button>
+
+    <div class="game-levels">
+      <h2>Dificuldade:</h2>
+      <div class="levels">
+        <div>
+          <input type="radio" id="easy" value="easy" name="level" checked>
+          <label for="easy">Iniciante</label>
+        </div>
+        <div>
+          <input type="radio" id="medium" value="medium" name="level">
+          <label for="easy">Mediano</label>
+        </div>
+        <div>
+          <input type="radio" id="hard" value="hard" name="level">
+          <label for="easy">Profissional</label>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <section class="container-balloons"></section>
+
+  <script src="./main.js"></script>
+</body>
+
 </html>

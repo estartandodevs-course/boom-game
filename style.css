@@ -15,6 +15,8 @@ header {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
+  position: relative;
+  top: 0;
 }
 
 .game-title,
@@ -66,4 +68,26 @@ header {
   height: auto;
   cursor: url("./assets/alfinete.png"), auto;
   position: absolute;
+}
+
+.game-levels {
+  display: flex;
+  z-index: 3;
+}
+.levels {
+  display: flex;
+  flex-direction: column;
+
+}
+/* .levels input {
+  display: none;
+} */
+#easy:checked + label {
+  color: white;
+}
+#medium:checked + label {
+  color: white;
+}
+#hard:checked + label {
+  color: white;
 }

@@ -1,12 +1,29 @@
 const buttonInitGame = document.querySelector(".btn-init-game");
+let level = document.querySelector(".levels input:checked").value
+
+function setLevel() {
+  level = this.value
+}
+
+buttonsGameLevelContainer = document.querySelector(".levels");
+buttonsGameLevel = buttonsGameLevelContainer.querySelectorAll("input")
+buttonsGameLevel.forEach((button) => { button.addEventListener("click", setLevel) });
 
 buttonInitGame.addEventListener("click", function () {
   buttonInitGame.remove();
+  document.querySelector(".game-levels").remove();
+  // .forEach(function () { this.remove() });
   initGame();
 });
 
 function initGame() {
-  setInterval(createBalloon, 1000);
+  const timeLevel = {
+    easy: 2000,
+    medium: 1000,
+    hard: 500
+  }
+  console.log(timeLevel[level])
+  setInterval(createBalloon, timeLevel[level]);
 }
 
 const balloonsContainer = document.querySelector(".container-balloons");

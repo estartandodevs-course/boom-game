@@ -91,3 +91,18 @@ header {
 #hard:checked + label {
   color: white;
 }
+.game-over-container {
+  background-color: #81caa8;
+  position: absolute;
+  left: 35vw;
+  top: 35vh;
+  width: 30vw;
+  height: 30vh;
+  border-radius: 20%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}

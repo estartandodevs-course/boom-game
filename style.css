@@ -62,17 +62,42 @@ header {
   height: 100vh;
   top: 0;
 }
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes floatup{
+  100% {
+    top: 0;
+  }
+}
 .balloon {
   width: 90px;
   height: auto;
   cursor: url("./assets/alfinete.png"), auto;
   position: absolute;
+  animation: slideup 0.4s ease;
+  animation: floatup 2s linear forwards;
 }
 
 .game-levels {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   z-index: 3;
+  position: fixed;
+  top: 35vh;
+  width: 30vw;
+  background-color: #81caa8;
+  padding: 10px;
+  border-radius: 20px;
 }
 .levels {
   display: flex;

@@ -12,30 +12,54 @@
 
 <body>
   <header>
-    <h1 class="game-title">BOOM! Devs</h1>
-    <h2 class="game-description">estoure os balões</h2>
-    <button class="btn-init-game">Jogar</button>
 
-    <div class="game-levels">
-      <h2>Dificuldade:</h2>
-      <div class="levels">
-        <div>
-          <input type="radio" id="easy" value="easy" name="level" checked>
-          <label for="easy">Iniciante</label>
+    <section class="score">
+      <p>Pontuação</p>
+      <p class="score-number">0</p>
+    </section>
+
+    <section class="description">
+      <h1 class="game-title">BOOM! Devs</h1>
+      <h2 class="game-description">estoure os balões</h2>
+    </section>
+
+    <div class="init-container">
+      <div class="game-levels">
+        <div class="start-container">
+          <h2>Dificuldade:</h2>
+          <button class="btn-init-game">Jogar</button>
         </div>
-        <div>
-          <input type="radio" id="medium" value="medium" name="level">
-          <label for="easy">Mediano</label>
-        </div>
-        <div>
-          <input type="radio" id="hard" value="hard" name="level">
-          <label for="easy">Profissional</label>
+
+        <div class="levels">
+          <div>
+            <input type="radio" id="easy" value="easy" name="level" checked>
+            <label for="easy">Iniciante</label>
+          </div>
+          <div>
+            <input type="radio" id="medium" value="medium" name="level">
+            <label for="easy">Mediano</label>
+          </div>
+          <div>
+            <input type="radio" id="hard" value="hard" name="level">
+            <label for="easy">Profissional</label>
+          </div>
         </div>
       </div>
+
     </div>
 
+    <section class="record">
+      <p>Record</p>
+      <p class="score-number">0</p>
+    </section>
+
+
   </header>
-  <section class="container-balloons"></section>
+  <main>
+    <section class="container-balloons">
+
+    </section>
+  </main>
 
   <script src="./main.js"></script>
 </body>

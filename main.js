@@ -31,7 +31,7 @@ function createBalloon() {
 
   balloonsContainer.appendChild(elementImg);
 
-  if (balloonsContainer.children.length < 5) {
+  if (balloonsContainer.children.length < 25) {
     balloonsContainer.appendChild(elementImg);
   } else {
     gameOver()

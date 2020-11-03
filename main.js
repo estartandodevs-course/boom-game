@@ -3,6 +3,7 @@ const buttonsGameLevelContainer = document.querySelector(".levels");
 const buttonsGameLevel = buttonsGameLevelContainer.querySelectorAll("input");
 const balloonsContainer = document.querySelector(".container-balloons");
 const scoreNumber = document.querySelector(".score-number");
+const recordNumber = document.querySelector(".record-number");
 const levels = document.querySelector(".game-levels");
 const balloonLimit = 10;
 const timeLevel = {
@@ -21,6 +22,15 @@ function updateScore() {
   const score = parseInt(scoreNumber.innerText, 10);
   scoreNumber.innerText = score + 1;
 }
+
+function updateRecord() {
+  const score = parseInt(scoreNumber.innerText, 10);
+  const record = parseInt(recordNumber.innerText, 10)
+  if (score > record) {
+    recordNumber.innerText = scoreNumber.innerText;
+  }
+}
+
 function reinitGame() {
   document.querySelector(".game-over-container").remove();
   document.querySelectorAll(".balloon").forEach(function (element) { element.remove() });
@@ -77,6 +87,8 @@ function removeBalloon(element) {
 
 function showGameOver() {
   validPoint = false;
+  updateRecord();
+
   const sectionGameOver = document.createElement("section");
   sectionGameOver.setAttribute("class", "game-over-container");
 
@@ -84,15 +96,21 @@ function showGameOver() {
   textGameOver.innerText = "Você perdeu, loser!";
   textGameOver.style.color = "#000000";
 
-  const finalScore = document.createElement("p")
-  finalScore.innerText = `Pontuação final: ${scoreNumber.innerText}`
+  const tauntText = document.createElement("p");
+  tauntText.style.fontStyle = "italic"
+  tauntText.innerText = "vai chorar ou"
+
+  const finalScore = document.createElement("p");
+  finalScore.style.fontWeight = "700";
+  finalScore.innerText = `Pontuação final: ${scoreNumber.innerText}`;
 
   buttonInitGame.style.display = "initial";
   buttonInitGame.style.bottom = "5px"
-  buttonInitGame.innerText = "Jogar novamente"
+  buttonInitGame.innerText = "Jogar novamente?";
 
   sectionGameOver.appendChild(textGameOver);
   sectionGameOver.appendChild(finalScore);
+  sectionGameOver.appendChild(tauntText);
   sectionGameOver.appendChild(buttonInitGame);
   balloonsContainer.appendChild(sectionGameOver);
 }

@@ -53,7 +53,7 @@ header {
   color: var(--tertiary-color);
 }
 
-.score-number {
+.score-number, .record-number {
   text-align: center;
   color: #cfcfcf;
   font-weight: 600;

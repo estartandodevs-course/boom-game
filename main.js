@@ -1,28 +1,26 @@
-const buttonInitGame = document.querySelector(".btn-init-game");
 const buttonsGameLevelContainer = document.querySelector(".levels");
 const buttonsGameLevel = buttonsGameLevelContainer.querySelectorAll("input");
 const balloonsContainer = document.querySelector(".container-balloons");
-const scoreNumber = document.querySelector(".score-number");
-const recordNumber = document.querySelector(".record-number");
-const levels = document.querySelector(".game-levels");
 const balloonLimit = 10;
 const timeLevel = {
   easy: 2000,
   medium: 1000,
   hard: 500
 };
-let level = document.querySelector(".levels input:checked").value
 let validPoint = true;
 
+let level = document.querySelector(".levels input:checked").value
 function setLevel() {
   level = this.value
 }
 
+const scoreNumber = document.querySelector(".score-number");
 function updateScore() {
   const score = parseInt(scoreNumber.innerText, 10);
   scoreNumber.innerText = score + 1;
 }
 
+const recordNumber = document.querySelector(".record-number");
 function updateRecord() {
   const score = parseInt(scoreNumber.innerText, 10);
   const record = parseInt(recordNumber.innerText, 10)
@@ -117,8 +115,10 @@ function showGameOver() {
 
 buttonsGameLevel.forEach((button) => { button.addEventListener("click", setLevel) });
 
+const buttonInitGame = document.querySelector(".btn-init-game");
 buttonInitGame.addEventListener("click", function () {
   buttonInitGame.style.display = "none";
+  const levels = document.querySelector(".game-levels");
   if (levels) { levels.remove(); }
   initGame();
 });

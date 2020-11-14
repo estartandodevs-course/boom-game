@@ -2,8 +2,9 @@
 <p align="center">Game developed in class with students Estartando Devs 2020 </p>
 <hr>
 <p align"center">
-  <img src="" alt="Game GIF>
+  <img src="" alt="Game GIF/>
   </p>
+  
 <h2>:memo: Technologies</h2>
   
 <ul>

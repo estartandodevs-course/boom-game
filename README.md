@@ -3,7 +3,9 @@
 <hr>
 <p align"center">
   <img src="" alt="Game GIF>
+  </p>
 <h2>:memo: Technologies</h2>
+  
 <ul>
   <li>HTML</li>
   <li>CSS</li>

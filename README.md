@@ -1,11 +1,14 @@
-# Boom Game
-Jogo desenvolvido em aula com alunos Estartando Devs 2020
+<h1 align="center">Boom Game :video_game: </h1>
+<p align="center">Game developed in class with students Estartando Devs 2020 </p>
+<hr>
+<p align"center">
+  <img src="" alt="Game GIF>
+<h2>:memo: Technologies</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+<hr>
 
-# Novas funcionalidades
-- [ ] Criação de niveis para o jogo (iniciante, mediano, profissional)
-- [ ] Contagem de balão com limite de X balões na tela. Caso o número de balões passe: perdeu.
-- [ ] Animação no surgimento do balão
-- [ ] Pontuação (Balões estourados)
-- [ ] Controle de pontos de vida
-
-Caso tenha sugestões de funcionalidades mande um pull request, adicionando-as nessa lista
+<h2>Go to the Game:</h2> <a href="https://jessicarf18.github.io/boom-game/" > Boom Game :balloon: :collision: </a>

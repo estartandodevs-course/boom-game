@@ -5,8 +5,10 @@ buttonInitGame.addEventListener("click", function () {
   initGame();
 });
 
+let myVar = undefined
+
 function initGame() {
-  setInterval(createBalloon, 1000);
+  myVar = setInterval(createBalloon, 1000);
 }
 
 const balloonsContainer = document.querySelector(".container-balloons");
@@ -28,6 +30,13 @@ function createBalloon() {
   });
 
   balloonsContainer.appendChild(elementImg);
+
+  if (balloonsContainer.children.length < 25) {
+    balloonsContainer.appendChild(elementImg);
+  } else {
+    gameOver()
+  }
+
 }
 
 function removeBalloon(element) {
@@ -35,4 +44,33 @@ function removeBalloon(element) {
   boomSound.play();
   boomSound.volume = 0.1;
   element.remove();
+}
+
+function gameOver() {
+
+  clearInterval(myVar)
+
+  let childrens = balloonsContainer.children
+
+  for (let i = 0; i < balloonsContainer.children.length; i++) {
+    balloonsContainer.removeChild(childrens[i])
+  }
+
+  balloonsContainer.innerHTML = `<div class="lost"> You Lost </div>`
+
+  let restart = document.createElement("a")
+  restart.setAttribute("class", "btn_restart")
+  restart.href = "index.html"
+  restart.textContent = "Jogar Novamente"
+
+  balloonsContainer.appendChild(restart)
+
+  soundGameOver()
+
+}
+
+function soundGameOver() {
+  const boomSound = new Audio("./assets/game-over.mp3");
+  boomSound.play();
+  boomSound.volume = 0.5;
 }

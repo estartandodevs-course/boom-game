@@ -35,7 +35,7 @@ setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
 //do balão no lugar da seta do mouse
 //fazer o alfinete pocar o balao ao ser clicado
 
-const sectionAlfinete = document.querySelector(".section-alfinete");
+/*const sectionAlfinete = document.querySelector(".section-alfinete");
 
 
 function aparecerAlfinete() {
@@ -47,5 +47,5 @@ function aparecerAlfinete() {
   sectionAlfinete.appendChild(elementImg);
 
 
-}
+}*/
 

@@ -4,11 +4,13 @@
 
 const containerBaloes = document.querySelector(".container-baloes");
 
+const elementoImg = document.createElement("img");
 function adicionarBalao() {
   const elementoImg = document.createElement("img");
 
   elementoImg.setAttribute("src", "./assets/baloon.png");
   elementoImg.setAttribute("class", "balao");
+  elementoImg.setAttribute("onclick", "pocarBalao()");
 
   const valorLeft = Math.round(Math.random() * 90);
   const valorTop = Math.round(Math.random() * 90);
@@ -23,7 +25,23 @@ function adicionarBalao() {
 
   console.log("Elemento Img =>", elementoImg);
 }
+function pocarBalao() {
+ // window.alert('clicou')
+ 
+ document.querySelector("img").style.display = "none" ;
+  
+}
+
 
 setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
 
 // adicionarBalao();
+
+
+//[x]fazer o alfinete aparecer quando em contato da area 
+//do balão no lugar da seta do mouse
+//fazer o alfinete pocar o balao ao ser clicado
+
+
+
+

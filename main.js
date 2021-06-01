@@ -10,7 +10,6 @@ function adicionarBalao() {
 
   elementoImg.setAttribute("src", "./assets/baloon.png");
   elementoImg.setAttribute("class", "balao");
-  elementoImg.setAttribute("onclick", "pocarBalao()");
 
   const valorLeft = Math.round(Math.random() * 90);
   const valorTop = Math.round(Math.random() * 90);
@@ -24,11 +23,12 @@ function adicionarBalao() {
   containerBaloes.appendChild(elementoImg);
 
   console.log("Elemento Img =>", elementoImg);
-}
-function pocarBalao() {
- // window.alert('clicou')
- 
- document.querySelector("img").style.display = "none" ;
+
+  elementoImg.addEventListener("click", function() {
+    console.log("clicou");
+    elementoImg.remove()
+  } )
+    
   
 }
 

@@ -7,5 +7,6 @@ function atribuirNovoValorAoH1() {
   tituloH1.textContent = novoValor;
 }
 
-const header = document.querySelector("h2");
-console.log("HEADER ->", header);
+const botaoAtualizar = document.querySelector("#botao-atualizar");
+
+botaoAtualizar.addEventListener("click", atribuirNovoValorAoH1);
